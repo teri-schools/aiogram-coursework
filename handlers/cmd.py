@@ -39,18 +39,3 @@ async def test(message: types.Message, repo: Repo, state: FSMContext):
     return message.answer(
         f"User: {await repo.get_user(message.from_user.id)}\nState: {await state.get_state()}\nData: {await state.get_data()}"
     )
-
-
-@cmd_router.message(Command("set_state"))
-async def test(message: types.Message, repo: Repo, state: FSMContext):
-    await state.set_state("CreateVacancy:skills")
-    await state.set_data(
-        {
-            "title": "Жуніор пайтон розробник",
-            "description": "Треба сосати хуї тимлідам.",
-            "company_name": "Помойка",
-            "location": "Нахуй",
-            "salary": 0,
-            "skills": ["пинати хуї", "посилати нах керівництво"],
-        }
-    )
