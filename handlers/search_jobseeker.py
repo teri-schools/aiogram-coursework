@@ -1,3 +1,10 @@
+"""
+This module contains handlers for searching and paginating jobseeker profiles.
+
+Functions:
+    search_jobseeker: Displays the first page of jobseeker profiles.
+    search_jobseeker: Handles pagination of jobseeker profiles.
+"""
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
 

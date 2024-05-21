@@ -1,3 +1,13 @@
+"""
+This module provides a repository class for interacting with the database.
+
+Classes:
+    Repo: A class that encapsulates database operations for users, jobseekers, and vacancies.
+
+Functions:
+    get_async_engine: Create an asynchronous SQLAlchemy engine.
+    get_async_sessionmake: Create an asynchronous session maker for the given engine.
+"""
 from sqlalchemy import URL, select, delete, desc
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, AsyncEngine
 from sqlalchemy.orm import selectinload

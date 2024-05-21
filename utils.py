@@ -2,6 +2,22 @@ from models import JobSeeker
 
 
 def get_job_seeker_report(data: dict | JobSeeker, include_id: bool = False) -> str:
+    """
+    Generate a formatted report string for a jobseeker's profile.
+
+    Args:
+        data (dict | JobSeeker): The jobseeker data, either as a dictionary or a JobSeeker instance.
+        include_id (bool, optional): Whether to include the jobseeker's ID in the report. Defaults to False.
+
+    Returns:
+        str: A formatted string containing the jobseeker's profile information.
+
+    This function takes a dictionary or a JobSeeker instance representing a jobseeker's profile data.
+    It formats the data into a human-readable string, including the jobseeker's name, email, phone number,
+    work experience, and skills. If the data is provided as a dictionary, any missing fields are replaced
+    with a default value ('не вказано'). If the `include_id` parameter is True, the jobseeker's ID is
+    also included in the report.
+    """
     if isinstance(data, JobSeeker):
         data, _data = {}, data
         for key in [

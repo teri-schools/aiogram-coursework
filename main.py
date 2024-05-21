@@ -1,3 +1,8 @@
+"""
+This module is the entry point of the Telegram bot application.
+
+It sets up the bot, dispatcher, and registers routers and middleware.
+"""
 import asyncio
 import logging
 import sys
@@ -20,6 +25,9 @@ from middleware import DatabaseMiddleware
 
 
 async def main():
+    """
+    The main function that runs the Telegram bot application.
+    """
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     logging.info("run main...")
 

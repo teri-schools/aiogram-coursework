@@ -1,3 +1,9 @@
+"""
+This module defines a middleware for managing database sessions.
+
+Classes:
+    DatabaseMiddleware: A middleware class that provides a database session and repository instance.
+"""
 from typing import Callable, Dict, Any, Awaitable
 
 from aiogram.fsm.middleware import BaseMiddleware
@@ -9,6 +15,12 @@ from db import Repo
 
 
 class DatabaseMiddleware(BaseMiddleware):
+    """
+    A middleware class that provides a database session and repository instance.
+
+    This middleware ensures that a new database session and repository instance are created
+    for each incoming update, and the session is closed after the update is processed.
+    """
     def __init__(self, sessionmake: sessionmaker[AsyncSession]):
         self.sessionmake = sessionmake
 

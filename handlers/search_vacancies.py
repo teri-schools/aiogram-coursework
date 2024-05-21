@@ -1,3 +1,11 @@
+"""
+This module contains handlers for searching and paginating job vacancies.
+
+Functions:
+    search_vacencies: Displays the first page of job vacancies.
+    responded_vacency: Handles the user's response to a job vacancy.
+    search_vacencies: Handles pagination of job vacancies.
+"""
 from aiogram import Router, types, F, Bot
 from aiogram.fsm.context import FSMContext
 

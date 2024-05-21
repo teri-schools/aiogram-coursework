@@ -1,3 +1,16 @@
+"""
+This module provides utility functions for creating Telegram keyboard markup.
+
+Functions:
+    paginate_buttons: Create an inline keyboard for pagination.
+    main: Create the main keyboard markup.
+    create_job_seeker: Create the keyboard markup for creating a jobseeker profile.
+    vacancy: Create the keyboard markup for managing vacancies.
+    exists_job_seeker: Create the keyboard markup when a jobseeker profile exists.
+    default: Create the default keyboard markup.
+    send_phone: Create    wait_finish: Create the keyboard markup with a "Finish" button.
+    confirm: Create the keyboard markup for confirmation (Yes/No).
+"""
 from aiogram.types import (
     ReplyKeyboardMarkup,
     KeyboardButton,

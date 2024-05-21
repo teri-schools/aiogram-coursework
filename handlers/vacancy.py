@@ -1,3 +1,19 @@
+"""
+This module contains handlers for creating and managing job vacancies.
+
+Functions:
+    my_vacancy: Displays the user's job vacancies or prompts to create one.
+    delete_vacancy: Deletes the specified job vacancy.
+    my_vacancies: Handles pagination of the user's job vacancies.
+    create_vacancy: Initiates the state machine for creating a job vacancy.
+    create_vacancy_title: Handles the input of the title in the job vacancy creation.
+    create_vacancy_description: Handles the input of the description in the job vacancy creation.
+    create_vacancy_company_name: Handles the input of the company name in the job vacancy creation.
+    create_vacancy_location: Handles the input of the location in the job vacancy creation.
+    create_vacancy_salary: Handles the input of the salary in the job vacancy creation.
+    finish_create_vacancy: Finalizes the job vacancy creation and saves the data to the database.
+    create_vacancy_add_skills: Handles the input of skills during the job vacancy creation.
+"""
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
 

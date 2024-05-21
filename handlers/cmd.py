@@ -1,3 +1,12 @@
+"""
+This module contains handlers for processing commands in a Telegram bot.
+
+Functions:
+    wellcome: Handles the /start command, greets the user and presents the main menu.
+    go_to_menu: Returns the user to the main menu from any state.
+    test: A test function for debugging purposes.
+    set_state: A test function for setting the state and data in the FSM context.
+"""
 from aiogram import Router, types, F
 from aiogram.filters import CommandStart, StateFilter, Command
 from aiogram.fsm.context import FSMContext

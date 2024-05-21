@@ -1,3 +1,19 @@
+"""
+This module contains handlers for creating and managing jobseeker profiles.
+
+Functions:
+    job_seeker: Displays the user's jobseeker profile or prompts to create one.
+    del_job_seeker: Deletes the user's jobseeker profile.
+    create_job_seeker: Initiates the state machine for creating a jobseeker profile.
+    create_job_seeker_first_name: Handles the input of the first name in the jobseeker profile creation.
+    create_job_seeker_last_name: Handles the input of the last name in the jobseeker profile creation.
+    create_job_seeker_middle_name: Handles the input of the middle name in the jobseeker profile creation.
+    create_job_seeker_email: Handles the input of the email in the jobseeker profile creation.
+    create_job_seeker_phone_number: Handles the input of the phone number in the jobseeker profile creation.
+    create_job_seeker_experience: Handles the input of the work experience in the jobseeker profile creation.
+    finish_create_job_seeker: Finalizes the jobseeker profile creation and saves the data to the database.
+    create_job_seeker_add_skills: Handles the input of skills during the jobseeker profile creation.
+"""
 from aiogram import Router, types, F
 from aiogram.fsm.context import FSMContext
 
