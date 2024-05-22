@@ -109,7 +109,7 @@
 
 (У діаграмі наведено основні класи та їх взаємодію у системі Telegram бота)
 
-![](assets\classes_my_project.svg)
+![](assets/classes_my_project.svg)
 
 ## Розділ 4. Реалізація
 
